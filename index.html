@@ -6,39 +6,52 @@
 
     <title>Jade Mueller | Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fdf7f5;
-            color: #4a4141;
+        * {
+            box-sizing: border-box;
         }
 
+        body {
+            margin: 0;
+            background: #f9f3f0;
+            color: #493d3d;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 25px 8%;
-            background-color: #fffaf8;
+            background: #f9f3f0;
         }
 
-        nav h2 {
-            margin: 0;
-            font-size: 22px;
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            color: #493d3d;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
-            color: #6b5b5b;
-            margin-left: 25px;
+            color: #665858;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             color: #c58f9b;
         }
 
+        /* Hero Section */
         .hero {
-            min-height: 75vh;
+            min-height: 78vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -47,40 +60,109 @@
             padding: 40px 20px;
         }
 
-        .hero h1 {
-            font-size: 60px;
+        .small-text {
+            color: #b88791;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 15px;
-            color: #3f3535;
         }
 
-        .hero h1 span {
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(55px, 9vw, 100px);
+            font-weight: 500;
+            line-height: 1;
+            margin: 0;
+            color: #3f3434;
+        }
+
+        h1 span {
             color: #c58f9b;
+            font-style: italic;
         }
 
-        .hero p {
-            max-width: 600px;
-            font-size: 18px;
-            line-height: 1.7;
+        .intro {
+            max-width: 620px;
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 30px auto;
+            color: #716363;
         }
 
+        /* Button */
         .button {
-            margin-top: 25px;
-            padding: 13px 25px;
-            background-color: #d9a9b3;
+            display: inline-block;
+            padding: 14px 28px;
+            background: #d6a5ae;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
         .button:hover {
-            background-color: #c58f9b;
+            background: #bd858f;
+            transform: translateY(-2px);
         }
 
+        /* Decorative circle */
+        .circle {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #ead4d4;
+            opacity: 0.45;
+            top: 25%;
+            right: 5%;
+            z-index: -1;
+        }
+
+        .circle-two {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: #e5c9bd;
+            opacity: 0.35;
+            bottom: 10%;
+            left: 5%;
+            z-index: -1;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 25px;
-            font-size: 14px;
-            color: #8a7777;
+            color: #998989;
+            font-size: 13px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                padding: 20px;
+            }
+
+            .nav-links a {
+                margin-left: 12px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .intro {
+                font-size: 15px;
+            }
+
+            .circle,
+            .circle-two {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -88,9 +170,9 @@
 <body>
 
     <nav>
-        <h2>Jade ♡</h2>
+        <div class="logo">Jade ♡</div>
 
-        <div>
+        <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Portfolio</a>
@@ -98,20 +180,29 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Hi, I'm <span>Jade!</span></h1>
 
-        <p>
+    <section class="hero">
+
+        <div class="circle"></div>
+        <div class="circle-two"></div>
+
+        <div class="small-text">Marketing • Creativity • Entrepreneurship</div>
+
+        <h1>Hi, I'm <span>Jade.</span></h1>
+
+        <p class="intro">
             I'm a Marketing and Entrepreneurship student at Iowa State University
             with a passion for creativity, social media, branding, and beauty and fashion.
             I love exploring new ideas and finding creative ways to bring them to life.
         </p>
 
         <a href="#" class="button">Explore My Work ♡</a>
+
     </section>
 
+
     <footer>
-        © 2026 Jade Mueller ♡
+        Made with ♡ by Jade Mueller
     </footer>
 
 </body>
