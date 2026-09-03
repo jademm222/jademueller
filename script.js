@@ -1,19 +1,24 @@
 ```javascript
-// Navigation menu
+// Portfolio Navigation
 document.addEventListener("DOMContentLoaded", function () {
 
-    const nav = document.createElement("nav");
-    nav.className = "portfolio-nav";
+    const navLinks = document.querySelectorAll(".portfolio-nav a");
 
-    nav.innerHTML = `
-        <div class="nav-name">JADE MUELLER</div>
+    navLinks.forEach(function (link) {
 
-        <a href="about.html">About Me</a>
-        <a href="education.html">Education</a>
-        <a href="experiences.html">Experiences</a>
-        <a href="contact.html">Contact Me</a>
-    `;
+        link.addEventListener("click", function () {
 
-    document.body.prepend(nav);
+            // Remove active class from all links
+            navLinks.forEach(function (item) {
+                item.classList.remove("active");
+            });
+
+            // Add active class to the link that was clicked
+            this.classList.add("active");
+
+        });
+
+    });
+
 });
 ```
