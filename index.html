@@ -1,14 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jade Mueller | Portfolio</title>
+    <title>Jade Mueller</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -17,151 +18,126 @@
 
         body {
             margin: 0;
-            background: #f9f3f0;
-            color: #493d3d;
             font-family: "DM Sans", sans-serif;
+            background-color: #fceff2;
+            color: #493b40;
         }
 
-        /* Navigation */
-        nav {
+        .homepage {
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 25px 8%;
-            background: #f9f3f0;
-        }
-
-        .logo {
-            font-family: "Playfair Display", serif;
-            font-size: 25px;
-            color: #493d3d;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #665858;
-            margin-left: 30px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #c58f9b;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 78vh;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
+            padding: 60px;
         }
 
-        .small-text {
-            color: #b88791;
+        .content {
+            max-width: 1000px;
+            width: 100%;
+            background-color: #fffafa;
+            border-radius: 30px;
+            padding: 80px;
+            box-shadow: 0 15px 45px rgba(180, 110, 130, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: #f3cbd4;
+            border-radius: 50%;
+            top: -150px;
+            right: -100px;
+        }
+
+        .small-title {
+            color: #c8758d;
             font-size: 14px;
-            letter-spacing: 2px;
+            font-weight: 600;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         h1 {
             font-family: "Playfair Display", serif;
-            font-size: clamp(55px, 9vw, 100px);
+            font-size: 75px;
             font-weight: 500;
-            line-height: 1;
+            line-height: 1.05;
             margin: 0;
-            color: #3f3434;
+            color: #3e3035;
         }
 
         h1 span {
-            color: #c58f9b;
-            font-style: italic;
+            color: #c8758d;
         }
 
         .intro {
-            max-width: 620px;
-            font-size: 17px;
+            max-width: 650px;
+            margin-top: 30px;
+            font-size: 18px;
             line-height: 1.8;
-            margin: 30px auto;
-            color: #716363;
+            color: #6e5d63;
         }
 
-        /* Button */
+        .interests {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .interest {
+            padding: 10px 18px;
+            background-color: #f9dfe5;
+            color: #9f5d70;
+            border-radius: 25px;
+            font-size: 13px;
+        }
+
         .button {
             display: inline-block;
-            padding: 14px 28px;
-            background: #d6a5ae;
+            margin-top: 35px;
+            padding: 15px 30px;
+            background-color: #c8758d;
             color: white;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 10px;
             font-size: 14px;
+            font-weight: 500;
             transition: 0.3s;
         }
 
         .button:hover {
-            background: #bd858f;
+            background-color: #ad5e76;
             transform: translateY(-2px);
         }
 
-        /* Decorative circle */
-        .circle {
-            position: absolute;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background: #ead4d4;
-            opacity: 0.45;
-            top: 25%;
-            right: 5%;
-            z-index: -1;
-        }
-
-        .circle-two {
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: #e5c9bd;
-            opacity: 0.35;
-            bottom: 10%;
-            left: 5%;
-            z-index: -1;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #998989;
-            font-size: 13px;
-        }
-
-        /* Mobile */
         @media (max-width: 700px) {
-            nav {
+
+            .homepage {
                 padding: 20px;
             }
 
-            .nav-links a {
-                margin-left: 12px;
-                font-size: 12px;
+            .content {
+                padding: 45px 30px;
             }
 
-            .hero {
-                min-height: 75vh;
+            h1 {
+                font-size: 52px;
             }
 
             .intro {
-                font-size: 15px;
+                font-size: 16px;
             }
 
-            .circle,
-            .circle-two {
-                display: none;
+            .accent {
+                width: 200px;
+                height: 200px;
+                top: -100px;
+                right: -80px;
             }
         }
     </style>
@@ -169,41 +145,41 @@
 
 <body>
 
-    <nav>
-        <div class="logo">Jade ♡</div>
+    <div class="homepage">
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+        <div class="content">
+
+            <div class="accent"></div>
+
+            <div class="small-title">
+                Marketing • Entrepreneurship • Creativity
+            </div>
+
+            <h1>
+                Hi, I'm <span>Jade.</span>
+            </h1>
+
+            <p class="intro">
+                I'm a Marketing and Entrepreneurship student at Iowa State University
+                with a passion for creativity, social media, branding, and beauty and fashion.
+                I love exploring new ideas and finding creative ways to bring them to life.
+            </p>
+
+            <div class="interests">
+                <div class="interest">Social Media</div>
+                <div class="interest">Branding</div>
+                <div class="interest">Content Creation</div>
+                <div class="interest">Beauty & Fashion</div>
+            </div>
+
+            <a href="#" class="button">
+                Explore My Portfolio
+            </a>
+
         </div>
-    </nav>
 
-
-    <section class="hero">
-
-        <div class="circle"></div>
-        <div class="circle-two"></div>
-
-        <div class="small-text">Marketing • Creativity • Entrepreneurship</div>
-
-        <h1>Hi, I'm <span>Jade.</span></h1>
-
-        <p class="intro">
-            I'm a Marketing and Entrepreneurship student at Iowa State University
-            with a passion for creativity, social media, branding, and beauty and fashion.
-            I love exploring new ideas and finding creative ways to bring them to life.
-        </p>
-
-        <a href="#" class="button">Explore My Work ♡</a>
-
-    </section>
-
-
-    <footer>
-        Made with ♡ by Jade Mueller
-    </footer>
+    </div>
 
 </body>
 </html>
+```
