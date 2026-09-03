@@ -3,18 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Mueller</title>
+
+    <title>Jade Mueller | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf7f5;
+            color: #4a4141;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background-color: #fffaf8;
+        }
+
+        nav h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6b5b5b;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #c58f9b;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: #3f3535;
+        }
+
+        .hero h1 span {
+            color: #c58f9b;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .button {
+            margin-top: 25px;
+            padding: 13px 25px;
+            background-color: #d9a9b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .button:hover {
+            background-color: #c58f9b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #8a7777;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Hi, I'm Jade!</h1>
+    <nav>
+        <h2>Jade ♡</h2>
 
-    <p>
-        I'm a Marketing and Entrepreneurship student at Iowa State University
-        with a passion for creativity, social media, branding, and beauty and fashion.
-        I love exploring new ideas and finding creative ways to bring them to life.
-    </p>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Hi, I'm <span>Jade!</span></h1>
+
+        <p>
+            I'm a Marketing and Entrepreneurship student at Iowa State University
+            with a passion for creativity, social media, branding, and beauty and fashion.
+            I love exploring new ideas and finding creative ways to bring them to life.
+        </p>
+
+        <a href="#" class="button">Explore My Work ♡</a>
+    </section>
+
+    <footer>
+        © 2026 Jade Mueller ♡
+    </footer>
 
 </body>
 </html>
