@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,61 +27,85 @@
             color: #493b40;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         .portfolio-nav {
             position: fixed;
             top: 25px;
             left: 25px;
-            z-index: 1000;
 
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+            width: 190px;
 
-            padding: 18px 20px;
+            padding: 20px;
 
-            background-color: rgba(255, 250, 250, 0.96);
-            border: 1px solid #f3d5dc;
-            border-radius: 16px;
+            background-color: #fffafa;
 
-            box-shadow: 0 8px 25px rgba(180, 110, 130, 0.12);
+            border: 1px solid #f1d2da;
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(180, 110, 130, 0.15);
+
+            z-index: 9999;
         }
 
         .nav-name {
             font-family: "Playfair Display", serif;
-            font-size: 15px;
+
+            font-size: 16px;
+
             color: #c8758d;
+
             letter-spacing: 2px;
-            margin-bottom: 8px;
+
+            margin-bottom: 15px;
+
+            padding-bottom: 12px;
+
+            border-bottom: 1px solid #f3d5dc;
         }
 
         .portfolio-nav a {
-            color: #6e5d63;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
+            display: block;
 
-            padding: 7px 10px;
+            padding: 10px 12px;
+
+            margin: 3px 0;
+
+            color: #6e5d63;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
             border-radius: 8px;
 
             transition: all 0.25s ease;
         }
 
-        .portfolio-nav a:hover {
+        .portfolio-nav a:hover,
+        .portfolio-nav a.active {
             background-color: #f9dfe5;
+
             color: #ad5e76;
-            padding-left: 14px;
+
+            padding-left: 16px;
         }
 
 
-        /* HOMEPAGE */
+        /* =========================
+           HOMEPAGE
+        ========================= */
 
         .homepage {
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             padding: 60px;
@@ -88,6 +113,7 @@
 
         .content {
             max-width: 1000px;
+
             width: 100%;
 
             background-color: #fffafa;
@@ -99,6 +125,7 @@
             box-shadow: 0 15px 45px rgba(180, 110, 130, 0.15);
 
             position: relative;
+
             overflow: hidden;
         }
 
@@ -120,9 +147,11 @@
             color: #c8758d;
 
             font-size: 14px;
+
             font-weight: 600;
 
             letter-spacing: 3px;
+
             text-transform: uppercase;
 
             margin-bottom: 20px;
@@ -132,6 +161,7 @@
             font-family: "Playfair Display", serif;
 
             font-size: 75px;
+
             font-weight: 500;
 
             line-height: 1.05;
@@ -151,6 +181,7 @@
             margin-top: 30px;
 
             font-size: 18px;
+
             line-height: 1.8;
 
             color: #6e5d63;
@@ -194,6 +225,7 @@
             border-radius: 10px;
 
             font-size: 14px;
+
             font-weight: 500;
 
             transition: 0.3s;
@@ -206,28 +238,36 @@
         }
 
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
             .portfolio-nav {
                 top: 15px;
+
                 left: 15px;
 
-                padding: 14px;
+                width: 165px;
+
+                padding: 15px;
+            }
+
+            .nav-name {
+                font-size: 14px;
             }
 
             .portfolio-nav a {
                 font-size: 12px;
-            }
 
-            .nav-name {
-                font-size: 13px;
+                padding: 8px 10px;
             }
 
             .homepage {
                 padding: 20px;
-                padding-top: 180px;
+
+                padding-top: 220px;
             }
 
             .content {
@@ -244,11 +284,14 @@
 
             .accent {
                 width: 200px;
+
                 height: 200px;
 
                 top: -100px;
+
                 right: -80px;
             }
+
         }
 
     </style>
@@ -258,25 +301,63 @@
 
 <body>
 
-    <div class="homepage">
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav class="portfolio-nav">
+
+        <div class="nav-name">
+            JADE MUELLER
+        </div>
+
+        <a href="about.html">
+            About Me
+        </a>
+
+        <a href="education.html">
+            Education
+        </a>
+
+        <a href="experiences.html">
+            Experiences
+        </a>
+
+        <a href="contact.html">
+            Contact Me
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         HOMEPAGE
+    ========================= -->
+
+    <main class="homepage">
 
         <div class="content">
 
             <div class="accent"></div>
 
+
             <div class="small-title">
                 Marketing • Entrepreneurship • Creativity
             </div>
 
+
             <h1>
                 Hi, I'm <span>Jade.</span>
             </h1>
+
 
             <p class="intro">
                 I'm a Marketing and Entrepreneurship student at Iowa State University
                 with a passion for creativity, social media, branding, and beauty and fashion.
                 I love exploring new ideas and finding creative ways to bring them to life.
             </p>
+
 
             <div class="interests">
 
@@ -298,18 +379,20 @@
 
             </div>
 
+
             <a href="about.html" class="button">
                 Explore My Portfolio
             </a>
 
         </div>
 
-    </div>
+    </main>
 
 
-    <!-- JavaScript Navigation -->
+    <!-- JavaScript -->
 
     <script src="script.js"></script>
+
 
 </body>
 
