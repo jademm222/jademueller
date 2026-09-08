@@ -1,4 +1,4 @@
-/* General reset & body styling */
+/* General resets & styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,48 +6,50 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #fce4ec; /* Light pink background area */
-  color: #111;
-  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fde8ed; /* Soft light pink background */
+  color: #4a3e3e; /* Softer dark charcoal/burgundy text */
+  line-height: 1.6;
   display: flex;
   justify-content: center;
   min-height: 100vh;
 }
 
-/* Page Container: Keeps 10% margin on left and right */
+/* Page Container: Keeps 10% side margins */
 .page-container {
   width: 80%; /* 10% margin left, 10% margin right */
-  margin: 20px auto;
+  margin: 30px auto;
   background-color: #ffffff;
-  border: 2px solid #000;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(230, 160, 180, 0.2);
+  border: 1px solid #f8bbd0;
   display: flex;
   flex-direction: column;
-}
-
-/* Base borders for layout elements */
-header, footer, section, aside, nav, div {
-  border-color: #000;
+  overflow: hidden;
 }
 
 /* Header Grid */
 .site-header {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  border-bottom: 2px solid #000;
+  grid-template-columns: 240px 1fr;
+  border-bottom: 1px solid #f8bbd0;
+  background-color: #fff0f5;
 }
 
 .logo-area {
-  border-right: 2px solid #000;
-  padding: 20px;
+  border-right: 1px solid #f8bbd0;
+  padding: 25px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .logo-area h1 {
-  font-size: 2rem;
-  font-weight: normal;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #a84260;
+  letter-spacing: 1px;
 }
 
 .header-top-right {
@@ -56,129 +58,182 @@ header, footer, section, aside, nav, div {
 }
 
 .banner-info {
-  padding: 15px;
-  border-bottom: 2px solid #000;
+  padding: 18px;
+  border-bottom: 1px solid #f8bbd0;
   flex-grow: 1;
+  font-size: 0.95rem;
+  color: #72525a;
+  background-color: #fff9fa;
 }
 
-/* Top Navigation Bars */
+/* Navigation Bars */
 .nav-bar-primary {
-  border-bottom: 1px solid #000;
-  padding: 8px 12px;
-  text-align: center;
+  border-bottom: 1px solid #f8bbd0;
+  padding: 10px 15px;
+  background-color: #fce4ec;
 }
 
 .nav-bar-secondary {
-  padding: 8px 12px;
-  text-align: center;
+  padding: 10px 15px;
+  background-color: #fff0f5;
 }
 
 .nav-bar-primary nav,
 .nav-bar-secondary nav {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
-.nav-bar-primary a,
-.nav-bar-secondary a,
-.sidebar-nav a {
-  color: #000;
+/* Clickable Nav Styling */
+a {
+  color: #a84260;
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-.nav-bar-primary a:hover,
-.nav-bar-secondary a:hover,
-.sidebar-nav a:hover {
+a:hover {
+  color: #d81b60;
   text-decoration: underline;
 }
 
-/* Main Layout Grid */
+.nav-bar-primary a,
+.nav-bar-secondary a {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.nav-bar-primary a:hover,
+.nav-bar-secondary a:hover {
+  background-color: #f8bbd0;
+}
+
+/* Main Grid Layout */
 .main-wrapper {
   display: grid;
-  grid-template-columns: 200px 1fr 220px;
+  grid-template-columns: 220px 1fr 240px;
   flex-grow: 1;
 }
 
-/* Left Sidebar */
+/* Left Sidebar Navigation */
 .sidebar-left {
-  border-right: 2px solid #000;
-  padding: 20px 15px;
+  border-right: 1px solid #f8bbd0;
+  padding: 25px 20px;
+  background-color: #fff9fa;
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .sidebar-nav .nav-section {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sidebar-nav h3 {
-  font-size: 1rem;
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #b05270;
+  margin-bottom: 4px;
 }
 
-/* Main Content Area */
+.sidebar-nav a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.sidebar-nav a:hover {
+  background-color: #fce4ec;
+}
+
+/* Center Main Content */
 .main-content {
-  padding: 20px;
+  padding: 30px;
+  background-color: #ffffff;
 }
 
 .hero-box {
-  border: 2px solid #000;
-  padding: 30px 20px;
+  border: 2px dashed #f48fb1;
+  background-color: #fff5f8;
+  border-radius: 12px;
+  padding: 35px 20px;
   margin-bottom: 25px;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #880e4f;
+  font-weight: 500;
 }
 
 .content-body h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #880e4f;
+  margin-bottom: 12px;
 }
 
 .content-body p {
+  color: #5d4037;
   margin-bottom: 15px;
 }
 
 /* Right Sticky Sidebar */
 .sidebar-right {
-  border-left: 2px solid #000;
-  padding: 20px 15px;
+  border-left: 1px solid #f8bbd0;
+  padding: 25px 20px;
+  background-color: #fff9fa;
 }
 
 .sticky-content {
   position: sticky;
-  top: 20px;
+  top: 25px;
 }
 
 .sticky-content h3 {
   font-size: 1rem;
-  margin-bottom: 10px;
+  color: #a84260;
+  margin-bottom: 12px;
 }
 
 .sticky-content ul {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .sticky-content li {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.sticky-content li::before {
+  content: "•";
+  color: #f48fb1;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
 }
 
 /* Footer */
 .site-footer {
-  border-top: 2px solid #000;
-  padding: 15px 20px;
+  border-top: 1px solid #f8bbd0;
+  padding: 18px 20px;
   text-align: center;
   font-size: 0.85rem;
+  color: #885e6a;
+  background-color: #fff0f5;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 850px) {
+/* Responsive view */
+@media (max-width: 900px) {
   .page-container {
-    width: 96%;
+    width: 94%;
   }
 
   .site-header {
@@ -187,7 +242,7 @@ header, footer, section, aside, nav, div {
 
   .logo-area {
     border-right: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 1px solid #f8bbd0;
   }
 
   .main-wrapper {
@@ -197,6 +252,6 @@ header, footer, section, aside, nav, div {
   .sidebar-left, .sidebar-right {
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 1px solid #f8bbd0;
   }
 }
