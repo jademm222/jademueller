@@ -1,399 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Jade Mueller</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: "DM Sans", sans-serif;
-            background-color: #fceff2;
-            color: #493b40;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        .portfolio-nav {
-            position: fixed;
-            top: 25px;
-            left: 25px;
-
-            width: 190px;
-
-            padding: 20px;
-
-            background-color: #fffafa;
-
-            border: 1px solid #f1d2da;
-            border-radius: 18px;
-
-            box-shadow: 0 10px 30px rgba(180, 110, 130, 0.15);
-
-            z-index: 9999;
-        }
-
-        .nav-name {
-            font-family: "Playfair Display", serif;
-
-            font-size: 16px;
-
-            color: #c8758d;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 15px;
-
-            padding-bottom: 12px;
-
-            border-bottom: 1px solid #f3d5dc;
-        }
-
-        .portfolio-nav a {
-            display: block;
-
-            padding: 10px 12px;
-
-            margin: 3px 0;
-
-            color: #6e5d63;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            border-radius: 8px;
-
-            transition: all 0.25s ease;
-        }
-
-        .portfolio-nav a:hover,
-        .portfolio-nav a.active {
-            background-color: #f9dfe5;
-
-            color: #ad5e76;
-
-            padding-left: 16px;
-        }
-
-
-        /* =========================
-           HOMEPAGE
-        ========================= */
-
-        .homepage {
-            min-height: 100vh;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 60px;
-        }
-
-        .content {
-            max-width: 1000px;
-
-            width: 100%;
-
-            background-color: #fffafa;
-
-            border-radius: 30px;
-
-            padding: 80px;
-
-            box-shadow: 0 15px 45px rgba(180, 110, 130, 0.15);
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .accent {
-            position: absolute;
-
-            width: 300px;
-            height: 300px;
-
-            background-color: #f3cbd4;
-
-            border-radius: 50%;
-
-            top: -150px;
-            right: -100px;
-        }
-
-        .small-title {
-            color: #c8758d;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-family: "Playfair Display", serif;
-
-            font-size: 75px;
-
-            font-weight: 500;
-
-            line-height: 1.05;
-
-            margin: 0;
-
-            color: #3e3035;
-        }
-
-        h1 span {
-            color: #c8758d;
-        }
-
-        .intro {
-            max-width: 650px;
-
-            margin-top: 30px;
-
-            font-size: 18px;
-
-            line-height: 1.8;
-
-            color: #6e5d63;
-        }
-
-        .interests {
-            display: flex;
-
-            gap: 12px;
-
-            flex-wrap: wrap;
-
-            margin-top: 30px;
-        }
-
-        .interest {
-            padding: 10px 18px;
-
-            background-color: #f9dfe5;
-
-            color: #9f5d70;
-
-            border-radius: 25px;
-
-            font-size: 13px;
-        }
-
-        .button {
-            display: inline-block;
-
-            margin-top: 35px;
-
-            padding: 15px 30px;
-
-            background-color: #c8758d;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 10px;
-
-            font-size: 14px;
-
-            font-weight: 500;
-
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background-color: #ad5e76;
-
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            .portfolio-nav {
-                top: 15px;
-
-                left: 15px;
-
-                width: 165px;
-
-                padding: 15px;
-            }
-
-            .nav-name {
-                font-size: 14px;
-            }
-
-            .portfolio-nav a {
-                font-size: 12px;
-
-                padding: 8px 10px;
-            }
-
-            .homepage {
-                padding: 20px;
-
-                padding-top: 220px;
-            }
-
-            .content {
-                padding: 45px 30px;
-            }
-
-            h1 {
-                font-size: 52px;
-            }
-
-            .intro {
-                font-size: 16px;
-            }
-
-            .accent {
-                width: 200px;
-
-                height: 200px;
-
-                top: -100px;
-
-                right: -80px;
-            }
-
-        }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Webpage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
-
-    <nav class="portfolio-nav">
-
-        <div class="nav-name">
-            JADE MUELLER
+  <div class="page-container">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="logo-area">
+        <h1>Logo</h1>
+      </div>
+      <div class="header-top-right">
+        <div class="banner-info">
+          This area is for informational graphics which describe in images what your site is about
         </div>
-
-        <a href="about.html">
-            About Me
-        </a>
-
-        <a href="education.html">
-            Education
-        </a>
-
-        <a href="experiences.html">
-            Experiences
-        </a>
-
-        <a href="contact.html">
-            Contact Me
-        </a>
-
-    </nav>
-
-
-    <!-- =========================
-         HOMEPAGE
-    ========================= -->
-
-    <main class="homepage">
-
-        <div class="content">
-
-            <div class="accent"></div>
-
-
-            <div class="small-title">
-                Marketing • Entrepreneurship • Creativity
-            </div>
-
-
-            <h1>
-                Hi, I'm <span>Jade.</span>
-            </h1>
-
-
-            <p class="intro">
-                I'm a Marketing and Entrepreneurship student at Iowa State University
-                with a passion for creativity, social media, branding, and beauty and fashion.
-                I love exploring new ideas and finding creative ways to bring them to life.
-            </p>
-
-
-            <div class="interests">
-
-                <div class="interest">
-                    Social Media
-                </div>
-
-                <div class="interest">
-                    Branding
-                </div>
-
-                <div class="interest">
-                    Content Creation
-                </div>
-
-                <div class="interest">
-                    Beauty & Fashion
-                </div>
-
-            </div>
-
-
-            <a href="about.html" class="button">
-                Explore My Portfolio
-            </a>
-
+        <div class="nav-bar-primary" id="primary-nav">
+          <!-- Injected by nav.js -->
         </div>
+        <div class="nav-bar-secondary" id="secondary-nav">
+          <!-- Injected by nav.js -->
+        </div>
+      </div>
+    </header>
 
-    </main>
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      <!-- Left Navigation Sidebar -->
+      <aside class="sidebar-left">
+        <div class="sidebar-nav" id="sidebar-nav">
+          <!-- Injected by nav.js -->
+        </div>
+      </aside>
 
+      <!-- Center Main Content -->
+      <main class="main-content">
+        <div class="hero-box">
+          Hero image at top
+        </div>
+        <article class="content-body">
+          <h2>Main content area</h2>
+          <p>
+            This area HAS to contain HTML text and images (i.e. not image text).
+            Text should be around 400 words and contain 5–7% keywords.
+          </p>
+        </article>
+      </main>
 
-    <!-- JavaScript -->
+      <!-- Right Sticky Sidebar -->
+      <aside class="sidebar-right">
+        <div class="sticky-content">
+          <h3>Sticky content such as</h3>
+          <ul>
+            <li>news items</li>
+            <li>adverts</li>
+            <li>offers</li>
+            <li>general site info</li>
+            <li>Social Networking icons</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="site-footer">
+      Footer: Contains copyright info, current year, primary links, contact, privacy statement, webmaster email address
+    </footer>
+  </div>
 
-
+  <script src="nav.js"></script>
 </body>
-
 </html>
-```
