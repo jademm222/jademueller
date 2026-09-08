@@ -1,46 +1,46 @@
-// Centralized Navigation Data
-const primaryNavLinks = [
-  { name: "Home", url: "index.html" },
-  { name: "About", url: "about.html" },
-  { name: "Projects", url: "projects.html" },
-  { name: "Contact", url: "contact.html" }
+// Navigation configuration for Jade Mueller's site
+const mainNavLinks = [
+  { name: "About Me", url: "#about" },
+  { name: "Education", url: "#education" },
+  { name: "Experiences", url: "#experiences" },
+  { name: "Contact Me", url: "#contact" }
 ];
 
 const secondaryNavLinks = [
-  { name: "Docs", url: "#" },
-  { name: "Gallery", url: "#" },
-  { name: "Blog", url: "#" },
-  { name: "FAQ", url: "#" }
+  { name: "Geology", url: "#geology" },
+  { name: "Hawaiian Studies", url: "#hawaiian-studies" },
+  { name: "Projects", url: "#projects" },
+  { name: "Resume", url: "#resume" }
 ];
 
-function buildNavHTML(links) {
-  return `<nav>` + links.map(link => `<a href="${link.url}">${link.name}</a>`).join(' | ') + `</nav>`;
+function createNavElements(links) {
+  return `<nav>` + links.map(link => `<a href="${link.url}">${link.name}</a>`).join(' &bull; ') + `</nav>`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Populate Top Primary Navigation
-  const primaryNavContainer = document.getElementById("primary-nav");
-  if (primaryNavContainer) {
-    primaryNavContainer.innerHTML = buildNavHTML(primaryNavLinks);
+  // Inject Primary Navigation
+  const primaryNav = document.getElementById("primary-nav");
+  if (primaryNav) {
+    primaryNav.innerHTML = createNavElements(mainNavLinks);
   }
 
-  // Populate Top Secondary Navigation
-  const secondaryNavContainer = document.getElementById("secondary-nav");
-  if (secondaryNavContainer) {
-    secondaryNavContainer.innerHTML = buildNavHTML(secondaryNavLinks);
+  // Inject Secondary Navigation
+  const secondaryNav = document.getElementById("secondary-nav");
+  if (secondaryNav) {
+    secondaryNav.innerHTML = createNavElements(secondaryNavLinks);
   }
 
-  // Populate Left Sidebar Navigation
-  const sidebarNavContainer = document.getElementById("sidebar-nav");
-  if (sidebarNavContainer) {
-    sidebarNavContainer.innerHTML = `
+  // Inject Left Sidebar Navigation
+  const sidebarNav = document.getElementById("sidebar-nav");
+  if (sidebarNav) {
+    sidebarNav.innerHTML = `
       <div class="nav-section">
-        <h3>Primary Navigation</h3>
-        ${primaryNavLinks.map(l => `<div><a href="${l.url}">${l.name}</a></div>`).join('')}
+        <h3>Main Navigation</h3>
+        ${mainNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
       </div>
       <div class="nav-section">
-        <h3>Secondary Navigation</h3>
-        ${secondaryNavLinks.map(l => `<div><a href="${l.url}">${l.name}</a></div>`).join('')}
+        <h3>Focus Areas</h3>
+        ${secondaryNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
       </div>
     `;
   }
