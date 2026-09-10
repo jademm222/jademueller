@@ -9,80 +9,79 @@
 <body>
 
   <div class="page-container">
-    <!-- Header -->
+    <!-- Centered Header -->
     <header class="site-header">
-      <div class="logo-area">
-        <h1>Jade Mueller</h1>
-      </div>
-      <div class="header-top-right">
-        <div class="banner-info">
-          Marketing & Entrepreneurship Student | Fashion, Wellness, Social Media & Travel
-        </div>
-        <div class="nav-bar-primary" id="primary-nav">
-          <!-- Injected by nav.js -->
-        </div>
-        <div class="nav-bar-secondary" id="secondary-nav">
-          <!-- Injected by nav.js -->
-        </div>
-      </div>
+      <h1>Jade Mueller</h1>
+      <span class="subtitle">Marketing & Entrepreneurship</span>
     </header>
 
-    <!-- Main Content Grid -->
+    <!-- Single Navigation Bar -->
+    <div class="nav-bar">
+      <nav id="nav-links">
+        <!-- Injected dynamically by nav.js -->
+      </nav>
+    </div>
+
+    <!-- Main Content Area -->
     <div class="main-wrapper">
-      <!-- Left Sidebar Nav -->
-      <aside class="sidebar-left">
-        <div class="sidebar-nav" id="sidebar-nav">
-          <!-- Injected by nav.js -->
-        </div>
-      </aside>
-
-      <!-- Center Main Content -->
       <main class="main-content">
-        <div class="hero-box">
-          ✨ Welcome to My Portfolio
-        </div>
-
-        <article class="content-body">
-          <section id="about" class="content-section">
+        
+        <!-- About Section with Photo -->
+        <section id="about" class="about-me-row">
+          <div class="photo-container">
+            <!-- Ensure your image file is in the same folder as index.html -->
+            <img src="me.jpg" alt="Jade Mueller holding matcha outdoors">
+          </div>
+          <div class="intro-text">
             <h2>About Me</h2>
             <p>
-              Hi, I'm Jade Mueller! I am a Marketing and Entrepreneurship student passionate about brand management, creative strategy, fashion aesthetics, holistic wellness, social media management, and global travel.
+              Hi, I'm Jade Mueller! I am a Marketing and Entrepreneurship student at Iowa State passionate about brand building, fashion aesthetics, wellness, creative social media strategies, and travel.
             </p>
+          </div>
+        </section>
+
+        <!-- Cards Section -->
+        <div class="cards-grid">
+          <section id="education" class="card">
+            <h3>Education</h3>
+            <p><strong>Iowa State University</strong><br>Pursuing a degree in Marketing and Entrepreneurship with a focus on digital brand strategies, social media marketing, and business innovation.</p>
           </section>
 
-          <section id="education" class="content-section">
-            <h2>Education</h2>
-            <p>
-              Currently studying Marketing & Entrepreneurship. My academic focus centers around digital marketing strategies, campaign development, consumer behavior, and entrepreneurial business models.
-            </p>
+          <section id="experiences" class="card">
+            <h3>Experiences</h3>
+            <p>Hands-on work in social media content creation, branding strategy, aesthetic styling, and digital marketing campaigns across fashion and lifestyle industries.</p>
           </section>
 
-          <section id="experiences" class="content-section">
-            <h2>Experiences</h2>
-            <p>
-              Hands-on experience in social media content strategy, brand positioning, audience engagement, creative styling, and travel media creation.
-            </p>
+          <section id="matcha" class="card">
+            <h3>Matcha</h3>
+            <p>A personal showcase of favorite matcha spots, recipes, and everyday wellness routines connecting lifestyle trends with creative media.</p>
           </section>
 
-          <section id="contact" class="content-section">
-            <h2>Contact Me</h2>
-            <p>
-              I'd love to collaborate or connect! Reach out via email or connect with me through my social channels.
-            </p>
+          <section id="portfolio" class="card">
+            <h3>Portfolio</h3>
+            <p>A collection of creative direction projects, social media growth plans, brand identity concepts, and travel media archives.</p>
           </section>
-        </article>
+        </div>
+
       </main>
 
-      <!-- Right Sticky Sidebar -->
+      <!-- Right Sidebar -->
       <aside class="sidebar-right">
         <div class="sticky-content">
           <h3>Highlights</h3>
           <ul>
-            <li>Marketing Strategies</li>
-            <li>Fashion & Styling</li>
-            <li>Wellness & Lifestyle</li>
-            <li>Social Media Growth</li>
-            <li>Travel Content & Guides</li>
+            <li>Iowa State Marketing</li>
+            <li>Brand Strategy Projects</li>
+            <li>Fashion & Aesthetic Styling</li>
+            <li>Wellness & Matcha Spots</li>
+            <li>Travel Archives</li>
+          </ul>
+
+          <h3 id="contact" style="margin-top: 30px;">Contact Me</h3>
+          <ul>
+            <li>Email: jademuelle@iastate.edu</li>
+            <li>LinkedIn: /in/jademuelle</li>
+            <li>Instagram: @jademuelle</li>
           </ul>
         </div>
       </aside>
@@ -90,7 +89,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      &copy; Jade Mueller. All rights reserved. | Marketing & Entrepreneurship Portfolio
+      &copy; Jade Mueller | Iowa State University
     </footer>
   </div>
 
