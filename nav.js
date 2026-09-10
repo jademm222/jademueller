@@ -1,4 +1,4 @@
-// Navigation configuration for Jade Mueller
+// Navigation configuration customized for Jade Mueller
 const primaryNavLinks = [
   { name: "About Me", url: "#about" },
   { name: "Education", url: "#education" },
@@ -6,10 +6,10 @@ const primaryNavLinks = [
   { name: "Contact Me", url: "#contact" }
 ];
 
-const interestNavLinks = [
-  { name: "Fashion", url: "#fashion" },
-  { name: "Wellness", url: "#wellness" },
-  { name: "Social Media", url: "#social-media" },
+const secondaryNavLinks = [
+  { name: "Matcha", url: "#matcha" },
+  { name: "Portfolio", url: "#portfolio" },
+  { name: "Social Media", url: "#social" },
   { name: "Travel", url: "#travel" }
 ];
 
@@ -18,29 +18,29 @@ function generateNavButtons(links) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Inject Primary Navigation links
+  // Inject Primary Navigation links into top header slot
   const primaryNav = document.getElementById("primary-nav");
   if (primaryNav) {
     primaryNav.innerHTML = generateNavButtons(primaryNavLinks);
   }
 
-  // Inject Interests Navigation links
+  // Inject Secondary Navigation links into top header slot
   const secondaryNav = document.getElementById("secondary-nav");
   if (secondaryNav) {
-    secondaryNav.innerHTML = generateNavButtons(interestNavLinks);
+    secondaryNav.innerHTML = generateNavButtons(secondaryNavLinks);
   }
 
-  // Inject Sidebar Links
+  // Inject Links into Left Sidebar Navigation
   const sidebarNav = document.getElementById("sidebar-nav");
   if (sidebarNav) {
     sidebarNav.innerHTML = `
       <div class="nav-section">
-        <h3>Navigation</h3>
+        <h3>Main Navigation</h3>
         ${primaryNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
       </div>
       <div class="nav-section">
-        <h3>Focus Areas</h3>
-        ${interestNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
+        <h3>Highlights</h3>
+        ${secondaryNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
       </div>
     `;
   }
