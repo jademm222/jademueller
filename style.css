@@ -6,32 +6,32 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fde8ed; /* Soft light pink background */
-  color: #4a3e3e; /* Softer dark charcoal/burgundy text */
+  font-family: 'Plus Jakarta Sans', 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #fde8ed; /* Light pink outer margin background */
+  color: #4a3b40;
   line-height: 1.6;
   display: flex;
   justify-content: center;
   min-height: 100vh;
 }
 
-/* Page Container: Keeps 10% side margins */
+/* Container: 10% side margins */
 .page-container {
-  width: 80%; /* 10% margin left, 10% margin right */
+  width: 80%; /* 10% margin on left and right */
   margin: 30px auto;
   background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(230, 160, 180, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(230, 160, 180, 0.25);
   border: 1px solid #f8bbd0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* Header Grid */
+/* Header Section */
 .site-header {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 260px 1fr;
   border-bottom: 1px solid #f8bbd0;
   background-color: #fff0f5;
 }
@@ -43,13 +43,15 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #fff7f9;
 }
 
 .logo-area h1 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #a84260;
-  letter-spacing: 1px;
+  color: #c2185b;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .header-top-right {
@@ -58,75 +60,87 @@ body {
 }
 
 .banner-info {
-  padding: 18px;
+  padding: 16px 20px;
   border-bottom: 1px solid #f8bbd0;
   flex-grow: 1;
   font-size: 0.95rem;
-  color: #72525a;
-  background-color: #fff9fa;
+  color: #885e6a;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
-/* Navigation Bars */
+/* Interactive Navigation Styling */
 .nav-bar-primary {
   border-bottom: 1px solid #f8bbd0;
-  padding: 10px 15px;
+  padding: 12px 20px;
   background-color: #fce4ec;
+  position: relative;
+  z-index: 10; /* Ensures navigation stays on top */
 }
 
 .nav-bar-secondary {
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: #fff0f5;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-bar-primary nav,
 .nav-bar-secondary nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* Clickable Nav Styling */
+/* Clickable Nav Link Buttons */
 a {
-  color: #a84260;
+  color: #ad1457;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  color: #d81b60;
-  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .nav-bar-primary a,
 .nav-bar-secondary a {
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  border: 1px solid #f48fb1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  display: inline-block;
 }
 
 .nav-bar-primary a:hover,
 .nav-bar-secondary a:hover {
-  background-color: #f8bbd0;
+  background-color: #ad1457;
+  color: #ffffff;
+  border-color: #ad1457;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(173, 20, 87, 0.2);
 }
 
-/* Main Grid Layout */
+/* Main Content Grid */
 .main-wrapper {
   display: grid;
   grid-template-columns: 220px 1fr 240px;
   flex-grow: 1;
 }
 
-/* Left Sidebar Navigation */
+/* Left Sidebar Nav */
 .sidebar-left {
   border-right: 1px solid #f8bbd0;
-  padding: 25px 20px;
-  background-color: #fff9fa;
+  padding: 25px 18px;
+  background-color: #fff7f9;
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 .sidebar-nav .nav-section {
@@ -136,57 +150,74 @@ a:hover {
 }
 
 .sidebar-nav h3 {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: #b05270;
+  letter-spacing: 1px;
+  color: #c2185b;
   margin-bottom: 4px;
 }
 
 .sidebar-nav a {
   display: block;
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  border: 1px solid #f8bbd0;
 }
 
 .sidebar-nav a:hover {
   background-color: #fce4ec;
+  color: #880e4f;
+  border-color: #f48fb1;
+  transform: translateX(3px);
 }
 
-/* Center Main Content */
+/* Center Content */
 .main-content {
-  padding: 30px;
+  padding: 35px;
   background-color: #ffffff;
 }
 
 .hero-box {
-  border: 2px dashed #f48fb1;
+  border: 1.5px dashed #f48fb1;
   background-color: #fff5f8;
-  border-radius: 12px;
-  padding: 35px 20px;
-  margin-bottom: 25px;
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: #880e4f;
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: inset 0 0 15px rgba(248, 187, 208, 0.2);
 }
 
-.content-body h2 {
-  font-size: 1.6rem;
-  color: #880e4f;
-  margin-bottom: 12px;
+.content-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fce4ec;
 }
 
-.content-body p {
+.content-section:last-child {
+  border-bottom: none;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  color: #880e4f;
+  margin-bottom: 10px;
+}
+
+.content-section p {
   color: #5d4037;
-  margin-bottom: 15px;
+  font-size: 0.98rem;
 }
 
-/* Right Sticky Sidebar */
+/* Right Sidebar Sticky */
 .sidebar-right {
   border-left: 1px solid #f8bbd0;
   padding: 25px 20px;
-  background-color: #fff9fa;
+  background-color: #fff7f9;
 }
 
 .sticky-content {
@@ -196,8 +227,8 @@ a:hover {
 
 .sticky-content h3 {
   font-size: 1rem;
-  color: #a84260;
-  margin-bottom: 12px;
+  color: #c2185b;
+  margin-bottom: 14px;
 }
 
 .sticky-content ul {
@@ -206,31 +237,33 @@ a:hover {
 }
 
 .sticky-content li {
-  margin-bottom: 10px;
-  padding-left: 18px;
+  margin-bottom: 12px;
+  padding-left: 20px;
   position: relative;
+  font-size: 0.9rem;
+  color: #6a4a52;
 }
 
 .sticky-content li::before {
-  content: "•";
+  content: "✦";
   color: #f48fb1;
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   position: absolute;
   left: 0;
-  top: -2px;
+  top: 1px;
 }
 
 /* Footer */
 .site-footer {
   border-top: 1px solid #f8bbd0;
-  padding: 18px 20px;
+  padding: 20px;
   text-align: center;
   font-size: 0.85rem;
   color: #885e6a;
   background-color: #fff0f5;
 }
 
-/* Responsive view */
+/* Responsive adjust for smaller screens */
 @media (max-width: 900px) {
   .page-container {
     width: 94%;
