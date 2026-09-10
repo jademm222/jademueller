@@ -1,6 +1,4 @@
-/* Import Google Fonts: Dancing Script for cursive name, Quicksand for cute lettering */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap');
-
+/* General resets & styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,51 +6,52 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #fdf6d8; /* Soft Butter Yellow Outer Background */
-  color: #4a4231;
+  font-family: 'Plus Jakarta Sans', 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #fde8ed; /* Soft light pink outer margin background */
+  color: #4a3b40;
   line-height: 1.6;
   display: flex;
   justify-content: center;
   min-height: 100vh;
 }
 
-/* Page Container: Keeps 10% margins on left and right */
+/* Page Container: Keeps 10% side margins */
 .page-container {
-  width: 80%; /* 10% side margins */
+  width: 80%; /* 10% margin on left and right */
   margin: 30px auto;
-  background-color: #ffffff; /* Clean White Main Box */
+  background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(180, 160, 90, 0.15);
-  border: 1px solid #f2e3b3;
+  box-shadow: 0 10px 30px rgba(230, 160, 180, 0.25);
+  border: 1px solid #f8bbd0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* Header Grid Matching Wireframe */
+/* Header Grid */
 .site-header {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  border-bottom: 1px solid #f2e3b3;
-  background-color: #ffffff;
+  grid-template-columns: 260px 1fr;
+  border-bottom: 1px solid #f8bbd0;
+  background-color: #fff0f5;
 }
 
 .logo-area {
-  border-right: 1px solid #f2e3b3;
+  border-right: 1px solid #f8bbd0;
   padding: 25px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #fffef7;
+  background-color: #fff7f9;
 }
 
 .logo-area h1 {
-  font-family: 'Dancing Script', cursive; /* Cursive script for name */
-  font-size: 2.6rem;
-  color: #d4a326; /* Warm golden-yellow cursive tone */
-  line-height: 1.1;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c2185b;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .header-top-right {
@@ -62,25 +61,29 @@ body {
 
 .banner-info {
   padding: 16px 20px;
-  border-bottom: 1px solid #f2e3b3;
+  border-bottom: 1px solid #f8bbd0;
   flex-grow: 1;
   font-size: 0.95rem;
-  color: #706346;
+  color: #885e6a;
   background-color: #ffffff;
   display: flex;
   align-items: center;
 }
 
-/* Dual Top Navigation Bars */
+/* Interactive Navigation Styling */
 .nav-bar-primary {
-  border-bottom: 1px solid #f2e3b3;
-  padding: 10px 20px;
-  background-color: #fffdf0;
+  border-bottom: 1px solid #f8bbd0;
+  padding: 12px 20px;
+  background-color: #fce4ec;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-bar-secondary {
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: #fff0f5;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-bar-primary nav,
@@ -88,12 +91,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
+/* Clickable Nav Link Buttons */
 a {
-  color: #9e7613;
+  color: #ad1457;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.25s ease;
@@ -101,22 +105,25 @@ a {
 
 .nav-bar-primary a,
 .nav-bar-secondary a {
-  padding: 5px 14px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.9rem;
   background-color: #ffffff;
-  border: 1px solid #f2e3b3;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  border: 1px solid #f48fb1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  display: inline-block;
 }
 
 .nav-bar-primary a:hover,
 .nav-bar-secondary a:hover {
-  background-color: #f7e7a8;
-  color: #4a3e10;
-  border-color: #d4a326;
+  background-color: #ad1457;
+  color: #ffffff;
+  border-color: #ad1457;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(173, 20, 87, 0.2);
 }
 
-/* 3-Column Body Grid Layout */
+/* Main Content Grid */
 .main-wrapper {
   display: grid;
   grid-template-columns: 220px 1fr 240px;
@@ -125,15 +132,15 @@ a {
 
 /* Left Sidebar Navigation */
 .sidebar-left {
-  border-right: 1px solid #f2e3b3;
+  border-right: 1px solid #f8bbd0;
   padding: 25px 18px;
-  background-color: #fffef7;
+  background-color: #fff7f9;
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 .sidebar-nav .nav-section {
@@ -146,7 +153,7 @@ a {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #b88d1d;
+  color: #c2185b;
   margin-bottom: 4px;
 }
 
@@ -156,89 +163,61 @@ a {
   border-radius: 10px;
   font-size: 0.9rem;
   background-color: #ffffff;
-  border: 1px solid #f2e3b3;
+  border: 1px solid #f8bbd0;
 }
 
 .sidebar-nav a:hover {
-  background-color: #fffdf0;
-  color: #7a5c0d;
-  border-color: #e3c46b;
+  background-color: #fce4ec;
+  color: #880e4f;
+  border-color: #f48fb1;
   transform: translateX(3px);
 }
 
-/* Center Content Area */
+/* Center Content */
 .main-content {
-  padding: 30px;
+  padding: 35px;
   background-color: #ffffff;
 }
 
-/* Hero Box at Top */
 .hero-box {
-  border: 2px dashed #e3c46b;
-  background-color: #fffdf2;
+  border: 1.5px dashed #f48fb1;
+  background-color: #fff5f8;
   border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 25px;
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 20px;
-  align-items: center;
-}
-
-.hero-photo-container {
-  border-radius: 14px;
-  overflow: hidden;
-  border: 3px solid #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  aspect-ratio: 9/16;
-}
-
-.hero-photo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-text-container h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.2rem;
-  color: #b88d1d;
-  margin-bottom: 6px;
-}
-
-.hero-text-container p {
-  font-size: 0.98rem;
-  color: #594d36;
-}
-
-/* Non-repetitive Content Sections */
-.content-section {
-  margin-bottom: 25px;
-  padding: 20px;
-  border-radius: 14px;
-  background-color: #fffef7;
-  border: 1px solid #f7eecc;
-}
-
-.content-section h3 {
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  text-align: center;
   font-size: 1.25rem;
-  color: #9e7613;
-  margin-bottom: 8px;
-  border-bottom: 2px dashed #f0db99;
-  padding-bottom: 4px;
+  color: #880e4f;
+  font-weight: 600;
+  box-shadow: inset 0 0 15px rgba(248, 187, 208, 0.2);
+}
+
+.content-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fce4ec;
+}
+
+.content-section:last-child {
+  border-bottom: none;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  color: #880e4f;
+  margin-bottom: 10px;
 }
 
 .content-section p {
-  color: #594d36;
-  font-size: 0.95rem;
+  color: #5d4037;
+  font-size: 0.98rem;
 }
 
-/* Right Sidebar Sticky Content */
+/* Right Sidebar Sticky */
 .sidebar-right {
-  border-left: 1px solid #f2e3b3;
+  border-left: 1px solid #f8bbd0;
   padding: 25px 20px;
-  background-color: #fffef7;
+  background-color: #fff7f9;
 }
 
 .sticky-content {
@@ -248,7 +227,7 @@ a {
 
 .sticky-content h3 {
   font-size: 1rem;
-  color: #b88d1d;
+  color: #c2185b;
   margin-bottom: 14px;
 }
 
@@ -262,12 +241,12 @@ a {
   padding-left: 20px;
   position: relative;
   font-size: 0.9rem;
-  color: #63553a;
+  color: #6a4a52;
 }
 
 .sticky-content li::before {
   content: "✦";
-  color: #d4a326;
+  color: #f48fb1;
   font-size: 0.85rem;
   position: absolute;
   left: 0;
@@ -276,15 +255,15 @@ a {
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid #f2e3b3;
-  padding: 18px 20px;
+  border-top: 1px solid #f8bbd0;
+  padding: 20px;
   text-align: center;
   font-size: 0.85rem;
-  color: #736446;
-  background-color: #fffdf0;
+  color: #885e6a;
+  background-color: #fff0f5;
 }
 
-/* Responsive adjust for smaller screens */
+/* Responsive view */
 @media (max-width: 900px) {
   .page-container {
     width: 94%;
@@ -296,7 +275,7 @@ a {
 
   .logo-area {
     border-right: none;
-    border-bottom: 1px solid #f2e3b3;
+    border-bottom: 1px solid #f8bbd0;
   }
 
   .main-wrapper {
@@ -306,10 +285,6 @@ a {
   .sidebar-left, .sidebar-right {
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #f2e3b3;
-  }
-
-  .hero-box {
-    grid-template-columns: 1fr;
+    border-bottom: 1px solid #f8bbd0;
   }
 }
