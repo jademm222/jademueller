@@ -1,4 +1,4 @@
-// Navigation links configuration for Jade Mueller
+// Navigation configuration for Jade Mueller
 const primaryNavLinks = [
   { name: "About Me", url: "#about" },
   { name: "Education", url: "#education" },
@@ -18,19 +18,19 @@ function generateNavButtons(links) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Inject Primary Navigation links into Header
+  // Inject Primary Navigation links
   const primaryNav = document.getElementById("primary-nav");
   if (primaryNav) {
     primaryNav.innerHTML = generateNavButtons(primaryNavLinks);
   }
 
-  // Inject Interests Navigation links into Header
+  // Inject Interests Navigation links
   const secondaryNav = document.getElementById("secondary-nav");
   if (secondaryNav) {
     secondaryNav.innerHTML = generateNavButtons(interestNavLinks);
   }
 
-  // Inject Links into Left Sidebar Navigation
+  // Inject Sidebar Links
   const sidebarNav = document.getElementById("sidebar-nav");
   if (sidebarNav) {
     sidebarNav.innerHTML = `
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${primaryNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
       </div>
       <div class="nav-section">
-        <h3>Interests</h3>
+        <h3>Focus Areas</h3>
         ${interestNavLinks.map(link => `<a href="${link.url}">${link.name}</a>`).join('')}
       </div>
     `;
