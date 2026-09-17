@@ -1,9 +1,9 @@
 // Navigation configuration customized for Jade Mueller
 const primaryNavLinks = [
-  { name: "About Me", url: "#about.html" },
+  { name: "About Me", url: "about.html" },
   { name: "Education", url: "education.html" },
-  { name: "Experiences", url: "#experiences.html" },
-  { name: "Contact Me", url: "#contact.html" }
+  { name: "Experiences", url: "experiences.html" },
+  { name: "Contact Me", url: "contact.html" }
 ];
 
 const secondaryNavLinks = [
