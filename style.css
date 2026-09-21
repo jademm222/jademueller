@@ -293,3 +293,27 @@ a {
     border-bottom: 1px solid #f2e3b3;
   }
 }
+.contact-form-section {
+  background: #fceff2;
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 12px;
+}
+
+.contact-form-section h3 {
+  margin-top: 0;
+}
+
+.contact-form-section p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.contact-form-section iframe {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border: none;
+  background: white;
+}
